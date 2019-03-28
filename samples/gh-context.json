@@ -1,0 +1,101 @@
+{
+  "options": {
+    "submit": "izaera",
+    "argv": {
+      "remain": ["pr"],
+      "cooked": ["pr", "--submit", "izaera"],
+      "original": ["pr", "--submit", "izaera"]
+    },
+    "remote": "origin",
+    "isTTY": {
+      "in": true,
+      "out": true
+    },
+    "loggedUser": "izaera",
+    "remoteUser": "izaera",
+    "user": "izaera",
+    "repo": "liferay-portal",
+    "currentBranch": "LPS-83949-g",
+    "github_host": "https://github.com/",
+    "github_gist_host": "https://gist.github.com/",
+    "state": "open",
+    "branch": "master",
+    "project": "LPS",
+    "jiraNumber": "LPS-83949",
+    "title": "LPS-83949 Now that we have the new loader setup, remove all configuration code",
+    "submittedPull": 88,
+    "currentSHA": "56ce4ee7daf9",
+    "changes": 5,
+    "pullHeadSHA": "56ce4ee7daf9~5"
+  },
+  "signature": "",
+  "jira": {
+    "base": "rest/api/2",
+    "hooks": {
+      "pull-request": {
+        "close": {
+          "before": [],
+          "after": ["gh jira {{jira.number.previous}}"]
+        },
+        "fetch": {
+          "before": [],
+          "after": []
+        },
+        "fwd": {
+          "before": [],
+          "after": [
+            "gh jira {{jira.number.current}} --assignee {{options.fwd}} --submittedLink {{forwardedLink}} --transition"
+          ]
+        },
+        "merge": {
+          "before": [],
+          "after": ["gh jira {{jira.number.previous}}"]
+        },
+        "submit": {
+          "before": [],
+          "after": [
+            "gh jira {{jira.number.previous}} --assignee {{options.submit}} --submittedLink {{submittedLink}} --transition"
+          ]
+        }
+      }
+    },
+    "host": "issues.liferay.com",
+    "password": "*************",
+    "port": "",
+    "protocol": "https",
+    "inferFromCommitTitle": true,
+    "transition": {
+      "Close Issue": {
+        "Fix Version/s": true
+      },
+      "Code Review Request": {
+        "Assignee": {
+          "name": "{{options.assignee}}"
+        },
+        "Git Pull Request": "{{options.submittedLink}}"
+      },
+      "Create Review Request": {
+        "Assignee": {
+          "name": "{{options.assignee}}"
+        },
+        "Git Pull Request": "{{options.submittedLink}}"
+      },
+      "Send for Review": {
+        "Assignee": {
+          "name": "{{options.assignee}}"
+        },
+        "Git Pull Request": "{{options.submittedLink}}"
+      },
+      "Start Progress": {
+        "Assignee": {
+          "name": "{{jira.user}}"
+        }
+      }
+    },
+    "user": "ivan.zaera",
+    "number": {
+      "previous": "LPS-83949",
+      "current": "LPS-83949"
+    }
+  }
+}

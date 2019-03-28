@@ -1,0 +1,14 @@
+{
+  "name": "pr-tracker",
+  "description": "A simple pull request tracker built on top of https://github.com/node-gh/gh",
+  "version": "1.0.0",
+  "repository": "https://github.com/izaera/pr-tracker",
+  "bin": {
+    "prt": "bin/prt.js"
+  },
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "izaera@gmail.com",
+  "license": "GPL-3.0-only"
+}

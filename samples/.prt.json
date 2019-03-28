@@ -1,0 +1,15 @@
+{
+  "repos": ["liferay/liferay-npm-build-tools", "liferay/liferay-amd-loader"],
+  "prs": {
+    "0": {
+      "user": "brianchandotcom",
+      "repo": "liferay-portal",
+      "number": "69098"
+    },
+    "2": {
+      "user": "brianchandotcom",
+      "repo": "liferay-portal",
+      "number": "69000"
+    }
+  }
+}
